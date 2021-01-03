@@ -96,13 +96,18 @@ dependencies {
     // jOOQ
     compile ("org.jooq:jooq:3.14.4") { exclude group: "org.reactivestreams" }
     // jUnit
-    testCompile("junit:junit:4.12")
+    testImplementation("junit:junit:4.13")
     // Testcontainers PostgreSQL
-    testCompile "org.testcontainers:postgresql:1.15.1"
+    testImplementation "org.testcontainers:postgresql:1.15.1"
     // Spring Boot test starter
     testImplementation('org.springframework.boot:spring-boot-starter-test') {
         exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
         exclude group: 'org.junit.jupiter'
         exclude group: 'org.mockito', module: 'mockito-junit-jupiter'
     }
+}
+
+test {
+    useJUnit()
+    testLogging.showStandardStreams = true
 }
