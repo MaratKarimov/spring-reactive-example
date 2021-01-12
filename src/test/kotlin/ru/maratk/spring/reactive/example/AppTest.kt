@@ -55,5 +55,13 @@ class AppTest {
             .body(BodyInserters.fromValue(book))
             .exchange()
             .returnResult(Int::class.java))
+
+        println(webClient
+            .get()
+            .uri("/")
+            //.contentType(MediaType.APPLICATION_JSON)
+            //.body(BodyInserters.fromValue(book))
+            .exchange()
+            .returnResult(String::class.java))
     }
 }
