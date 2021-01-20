@@ -29,7 +29,7 @@ plugins {
     // Kotlin JVM plugin
     id 'org.jetbrains.kotlin.jvm' version '1.4.0'
     // Spring boot plugin
-    id 'org.springframework.boot' version '2.4.1'
+    id 'org.springframework.boot' version '2.4.2'
 }
 
 apply plugin: 'java'
@@ -61,8 +61,6 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.2")
     // Kotlin coroutines reactor
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor:1.4.2")
-    // Kotlin coroutines reactive
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactive:1.4.2")
     // Spring Boot data r2dbc starter
     compile("org.springframework.boot:spring-boot-starter-data-r2dbc:2.4.1")
     // Spring Boot Webflux starter
